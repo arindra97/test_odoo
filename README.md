@@ -41,3 +41,15 @@ I explored two distinct approaches for palindrome detection.
 
 1. The first involved a manual string reversal: converting the input to lowercase, determining its length, creating a reversed copy, and then comparing it to the original.
 2. The second approach leveraged Python's built-in string slicing capabilities for a more concise reversal. Specifically, the [::-1] slice was employed to efficiently generate the reversed string for comparison.
+
+### 3. Logika Pecahan Uang [open here](https://github.com/arindra97/test_odoo/blob/main/Python/3_logic_pecahan_uang.py)
+
+The function `pecah_uang` in Python is format number into currency format.
+
+The function `pecah_uang` takes a number as input and validate it is an integer or not and takes a lang for the format currency default value is `id`.
+The function `pecah_uang` returns format currency number with grouping 3 digit
+
+For representing currency formatting (pecahan uang), I explored two distinct formatting approaches.
+
+1. The first involved a manual grouping method: validating the input as an integer, converting it to a string, reversing the string, grouping it into three-digit chunks via slicing, joining the chunks, and then reversing the result again to match the desired locale.
+2. The second approach leveraged Python's built-in string formatting capabilities. Using the {:,} format specifier, numerical values are automatically grouped according to currency conventions, adapting to the specified locale.
