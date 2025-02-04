@@ -53,3 +53,7 @@ For representing currency formatting (pecahan uang), I explored two distinct for
 
 1. The first involved a manual grouping method: validating the input as an integer, converting it to a string, reversing the string, grouping it into three-digit chunks via slicing, joining the chunks, and then reversing the result again to match the desired locale.
 2. The second approach leveraged Python's built-in string formatting capabilities. Using the {:,} format specifier, numerical values are automatically grouped according to currency conventions, adapting to the specified locale.
+
+### 4. Logika Huruf Vokal [open here](https://github.com/arindra97/test_odoo/blob/main/Python/4_logic_huruf_vokal.py)
+
+For this exercise, I developed a function to count vowels in words. The function takes a word as input, iterates through its characters, checks for vowel occurrences, and returns the total vowel count. If no vowels are found, it reports accordingly.
