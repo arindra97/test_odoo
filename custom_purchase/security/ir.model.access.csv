@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_order_news,purchase.order.news,model_purchase_order_news,purchase.group_purchase_user,1,1,1,1
+access_purchase_order_news_manager,purchase.order.news,model_purchase_order_news,purchase.group_purchase_manager,1,1,1,1
+access_purchase_order_news_invoicing_payments_readonly,purchase.order.news,model_purchase_order_news,account.group_account_readonly,1,0,0,0
+access_purchase_order_news_invoicing_payments,purchase.order.news,model_purchase_order_news,account.group_account_invoice,1,1,0,0
+access_ga_purchase_order_news,purchase.order.news,model_purchase_order_news,custom_purchase.group_general_affair,1,1,1,1
+access_ga_purchase_order_news_invoicing_payments,purchase.order.news,model_purchase_order_news,custom_purchase.group_general_affair,1,1,1,0

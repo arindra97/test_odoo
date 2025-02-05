@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_news_view_search" model="ir.ui.view">
+        <field name="name">purchase.order.news.view.search</field>
+        <field name="model">purchase.order.news</field>
+        <field name="arch" type="xml">
+            <search string="Search Berita Acara">
+                <field name="name"/>
+                <separator/>
+                <filter name="submit" string="Belum Invoice" domain="[('state', 'in', ('draft', 'submit'))]"/>
+                <filter name="approved" string="Invoice" domain="[('state', 'in', ('approve', 'done'))]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="purchase_order_news_view_form" model="ir.ui.view">
+        <field name="name">purchase.order.news.form</field>
+        <field name="model">purchase.order.news</field>
+        <field name="arch" type="xml">
+            <form string="Berita Acara">
+                <header>
+                    <button name="button_submit" type="object" states="draft" string="Submit Berita Acara" />
+                    <button name="button_draft" type="object" string="Reject" states="submit" groups="custom_purchase.group_general_affair" />
+                    <button name="button_approve" type="object" string="Approve" class="oe_hightlight" states="submit" groups="custom_purchase.group_general_affair" />
+                    <button name="button_done" type="object" string="Done" states="approve" groups="custom_purchase.group_general_affair"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit,approve,done" readonly="1"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <span class="o_form_label">Berita Acara</span>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="delivery_date" string="Delivery Date"/>
+                            <field name="news_information" string="News Information" widget="html" />
+                            <field name="invoice_po_news_id" string="ID Invoice BA" attrs="{'invisible':[('state','not in','done')]}" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="origin" string="Source Document"/>
+                            <field name="partner_id" string="Partner"/>
+                            <field name="purchase_order_id" string="Purchase Order ID"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="purchase_order_news_view_tree" model="ir.ui.view">
+        <field name="name">purchase.order.news.tree</field>
+        <field name="model">purchase.order.news</field>
+        <field name="arch" type="xml">
+            <tree string="Berita Acara">
+                <field name="name"/>
+                <field name="delivery_date"/>
+                <field name="origin"/>
+                <field name="partner_id"/>
+                <field name="purchase_order_id"/>
+                <field name="invoice_po_news_id"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Configuration/Lead & Opportunities/Lost Reasons Menu -->
+    <record id="purchase_order_news_action" model="ir.actions.act_window">
+        <field name="name">Berita Acara</field>
+        <field name="res_model">purchase.order.news</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Define a berita acara
+            </p>
+        </field>
+    </record>
+
+    <!--Berita Acara menu-->
+    <menuitem id="menu_purchase_order_news" name="Berita Acara"
+        parent="purchase.menu_procurement_management"
+        action="custom_purchase.purchase_order_news_action" sequence="20"/>
+</odoo>
