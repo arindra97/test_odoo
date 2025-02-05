@@ -57,3 +57,7 @@ For representing currency formatting (pecahan uang), I explored two distinct for
 ### 4. Logika Huruf Vokal [open here](https://github.com/arindra97/test_odoo/blob/main/Python/4_logic_huruf_vokal.py)
 
 For this exercise, I developed a function to count vowels in words. The function takes a word as input, iterates through its characters, checks for vowel occurrences, and returns the total vowel count. If no vowels are found, it reports accordingly.
+
+### 5. Logika Terbilang [open here](https://github.com/arindra97/test_odoo/blob/main/Python/5_logic_terbilang.py)
+
+This exercise involved developing two functions: terbilang_pecahan_uang for converting numerical currency amounts into their Indonesian text representation, and terbilang_angka for translating individual numbers into Indonesian words. The terbilang_pecahan_uang function operates by segmenting the input number into three-digit groups and converting each group to its word equivalent
