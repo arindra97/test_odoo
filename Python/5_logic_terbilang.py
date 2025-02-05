@@ -92,7 +92,24 @@ def terbilang_pecahan_uang(number, sep=''):
     terbilang_str_fix = terbilang_str_fix.replace("satu belas", "sebelas")
     return terbilang_str_fix
 
-angka = '2.311.000'
-angka_2 = '123.456.789'
-print(f"Angka {angka} \nTerbilang: {terbilang_pecahan_uang(angka, ".")}")
-print(f"Angka {angka_2} \nTerbilang: {terbilang_pecahan_uang(angka_2, ".")}")
+pecahan_uang = '2.311.000'
+pecahan_uang_2 = '123.456.789'
+print(f"Rp {pecahan_uang} \nTerbilang: {terbilang_pecahan_uang(pecahan_uang, ".")}")
+print(f"Rp {pecahan_uang_2} \nTerbilang: {terbilang_pecahan_uang(pecahan_uang_2, ".")}")
+
+def terbilang_angka(number):
+    # The `number_str` list is used to store the Indonesian words for numbers from 0 to 10. 
+    number_str = [
+            'nol', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh',
+            'delapan', 'sembilan'
+        ]
+    
+    terbilang = []
+    for x in number:
+        terbilang.append(number_str[int(x)])
+
+    return " ".join(terbilang)
+
+
+angka = '10234567890'
+print(f"Angka {angka} \nTerbilang: {terbilang_angka(angka)}")
