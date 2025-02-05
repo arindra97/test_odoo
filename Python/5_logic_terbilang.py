@@ -98,7 +98,15 @@ print(f"Rp {pecahan_uang} \nTerbilang: {terbilang_pecahan_uang(pecahan_uang, "."
 print(f"Rp {pecahan_uang_2} \nTerbilang: {terbilang_pecahan_uang(pecahan_uang_2, ".")}")
 
 def terbilang_angka(number):
-    # The `number_str` list is used to store the Indonesian words for numbers from 0 to 10. 
+    """
+    The function `terbilang_angka` converts a given number into its Indonesian word representation.
+    
+    :param number: The `number` parameter in the `terbilang_angka` function is expected to be a string
+    representing a number. The function converts this number into its Indonesian word representation
+    :return: The function `terbilang_angka` takes a number as input and converts it into its Indonesian
+    word representation. The function returns a string that represents the input number in Indonesian
+    words.
+    """
     number_str = [
             'nol', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh',
             'delapan', 'sembilan'
