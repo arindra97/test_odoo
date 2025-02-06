@@ -2,7 +2,7 @@
 
 This constitutes the answer to the test IT Programmer Odoo.
 
-## A. Test Programming SQL [open here](https://github.com/arindra97/test_odoo/tree/main/SQL%20Test)
+## A. Test Programming SQL [open here](https://github.com/arindra97/test_odoo/blob/main/SQL%20Test/test_sql_living_world.sql)
 
 My approach for this test, using PostgreSQL, involved an initial ERD design phase to ensure efficient data mapping
 
