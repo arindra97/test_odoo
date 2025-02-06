@@ -45,7 +45,7 @@ class PurchaseOrderNews(models.Model):
             'move_type': 'in_invoice',  # Supplier invoice
             'partner_id': self.partner_id.id,  # From the BA
             'purchase_order_news_id': self.id,  # Link to the BA
-            'payment_reference': self.name,  # BA number as invoice reference
+            'ref': self.name,  # BA number as invoice reference
             'invoice_date': fields.Date.today(),  # Set invoice date
         })
 
